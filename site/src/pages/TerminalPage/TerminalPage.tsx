@@ -16,7 +16,7 @@ import { workspaceByOwnerAndName } from "api/queries/workspaces";
 import { useProxy } from "contexts/ProxyContext";
 import { ThemeOverride } from "contexts/ThemeProvider";
 import themes from "theme";
-import { MONOSPACE_FONT_FAMILY } from "theme/constants";
+//import { MONOSPACE_FONT_FAMILY } from "theme/constants";
 import { pageTitle } from "utils/page";
 import { openMaybePortForwardedURL } from "utils/portForward";
 import { terminalWebsocketUrl } from "utils/terminal";
@@ -95,10 +95,11 @@ const TerminalPage: FC = () => {
       allowProposedApi: true,
       allowTransparency: true,
       disableStdin: false,
-      fontFamily: MONOSPACE_FONT_FAMILY,
-      fontSize: 16,
+      fontFamily: "'Fira Code for Powerline', 'Fira Mono for Powerline', 'Fira Code', 'Fira Mono', 'MesloLGS', monospace",
+      //MONOSPACE_FONT_FAMILY,
+      fontSize: 15,
       theme: {
-        background: theme.palette.background.default,
+        background: "rgb(36, 36, 36)",
       },
     });
     if (renderer === "webgl") {
